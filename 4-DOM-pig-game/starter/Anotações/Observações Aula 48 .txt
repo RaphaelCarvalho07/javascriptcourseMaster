@@ -1,0 +1,36 @@
+Tópico 1, aula 48 - How to Create our Fundamentals Game Variables.
+
+Tópico 2, aula 48 - How to Generate Random Numbers.
+    - Usaremos um Objeto do JS chamado Math (o 'M' precisa ser maiúsculo) que possui diversos métodos matemáticos para uso dentro do código;
+        - Math.random() => Método para gerar números aleatórios;
+        - Math.floor() => Método que remove a parte decimal de um número, tornando-o inteiro (integer)
+    - É possível chamar (executar), uma função dentro da outra ou até mesmo um método dentro de outro método. A sintaxe fica EG: => Math.floor(Math.random() * 6) + 1. <= Esta funçao
+        por exemplo, retorna um número inteiro, entre 1 e 6;
+
+Tópico 3, aula 48 - How to Manipulate The DOM (Document Object Model (Webpage)).
+    - O Objeto que nos dá acesso ao ao DOM, é o Document Object, usando a palavra reservada 'document';
+    - Existem alguns métodos que podemos usar para selecionar elementos da nossa Webpage (DOM);
+        - O mais usado é o método querySelector. Sintaxe EG: document.querySelector(#id);
+        - O método querySelector é fácil de usar porque nos permite selecionar elementos exatamente como o CSS.
+            A única diferença é que o querySelector apenas seleciona o primeiro elemento que ele acha. Existe uma solução para isso, porém, veremos mais para frente;
+        - Com este método, selecionaremos os elementos que armazenam informações da rolagem dos dados na Webpage (DOM) de cada Player e colocaremos o valor dinâmico feito pela função
+            descrita no Tópico 2;
+        - Este elemento se chama "current" e é diferenciado pelos números 0 e 1 (binários), onde representam Player 1 e Player 2 respectivamente;
+        - Para selecionar ID's no HTML usando CSS, usamos o símbolo #(hash). A sintaxe fica algo assim EG: document.querySelector('#score-0');
+    - Precisamos alterar o texto do elemento (current), para tal, usaremos outro método, chamado textContent. A sintaxe fica algo assim EG: 
+        document.querySelector('#current-0').textContent = dice;
+        - O método textContent apenas funciona para plain text. Não é possível usar métodos HTML usando este método. Para isto, devemos usar métodos HTML para outros resultados senão plain
+            text;
+    - Para alterar  conteúdo de alguns elements usando algumas tags, métodos e afins HTML, precisamos chamar um método HTML, chamado innerHTML, pois ele permite o uso de recursos HTML;
+        - A sintaxe fica algo assim EG: document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
+
+Tópico 4, aula 48 - How to Read from the DOM (Document Object Model (Webpage)).        
+    - Quando usamos o método querySelector desta forma => document.querySelector('#current-' + activePlayer).textContent = dice <= chamamos de setter, porque está configurando/setando
+        um valor;
+    - Podemos usar o método querySelector como getter, quando você o usa para armazenar a informação coletada em alguma variável, com esta sintaxe:
+            => var x = document.querySelector('#score-' + activePlayer).textContent <=;
+        
+Tópico 5, aula 48 - How to Change CSS Style of some element from the DOM (Document Object Model (Webpage)).        
+    - Podemos usar este mesmo método para alterarmos o CSS de algum elemento, neste caso, será uma classe;
+      - Para selecionar o elemento class no HTML, usando CSS, usamos o símbolo .(ponto). A sintaxe fica assim EG: document.querySelector('.dice')style.display = 'none';
+    - Para fazer com que algum elemento apareça ou não no DOM, setamos a propriedade display deste elemento para none;

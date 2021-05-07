@@ -1,0 +1,41 @@
+Tópicos:
+    1 - How to set up an event handler;
+    2 - What a callback function is;
+    3 - What an anonymous function is;
+    4 - Another way to select elements by ID;
+    5 - How to change the image in an <img> element.
+
+
+    1 - How to set up an event handler:
+        - Eventos são notificações que interagem com o nosso código, informando que algo aconteceu no DOM (Document Object Model(Webpage));
+            - Eventos são disparados quando coisas acontecem, como um clicar de botão, scrollar a tela para cima e para baixo ou até mesmo, o apertar de uma tecla;
+        - Nós podemos usar Events Listeners para codar tipos de respostas para todos estes eventos;
+            - O "Event Listener" é uma função que basicamente espera por um evento específico acontecer;
+            - O "Event Listener" só pode ser executado ou tratado, apenas quando uma Execution Stack está vazia, ou seja, após outras funções retornarem;
+        - Além do Execution Stack, nós temos outra coisa chamada Message Queue no motor do JS;
+            - O Message Queue é aonde os eventos ocorridos no DOM são colocados e aguardam até serem processados;
+            - Quando um evento ocorre, ele chama um "Event Listener", uma função que reage a um evento. A função "Event Listener" tem seu próprio Execution Context;
+        - A sintaxe fica assim => document.querySelector('btn-roll').addEventListener('click', btn) <=;
+            - O "addEventListener" recebe dois argumentos: o tipo de evento que o "addEventListener" está esperando/ouvindo e o segundo argumento é função que será chamada quando este 
+                evento acontecer;
+    
+    2 - What a callback function is:
+        - Quando queremos que outro elemento e não nós mesmos chame (execute) uma função, devemos passar apenas o nome a função sem o operador ();
+            - Quando uma determinada função é passada como argumento para outra função(o método "addEventListener", por exemplo), ela é chamada de "callback function",
+                pois é excecutada por outra função, etc;
+    
+    3 = What an anonymous function is;
+        - Uma "anonymous function" é simplesmente uma função que não tem um nome;
+            -  Uma "anonymous function" não pode ser usada (chamada/executada) fora do contexto que ela está declarada, neste caso, o método "addEventListener";
+
+    4 - Another way to select elements by ID;
+        - Existe outra maneira de selecionar elementos senão o querySelector: o getElementById
+            - O getElementById apenas funciona quando temos ID's;
+            - O getElementById é mais rápido do que o querySelector;
+            - Quando temos ID's, é melhor usar este método, ao invés de ficar sempre usando o querySelector que é mais custoso em performance;
+        - Quando usamos o getElementById, um método específico para ID's, não precisamos usar CSS Style como o símbolo # para denotar que estamos em busca de ID, por exemplo;
+            - A sintaxe é assim => document.getElementById('score-0').textContent = 0 <=
+
+    5 = How to change the image in an <img> element.
+        - Para alterar uma imagem em um <img> element, gerenciado pelo atributo src (source) no HTML, em JS usa-se a keyword 'src', passando como argumento, o nome da imagem;
+            - A sintaxe é => document.querySelector('.dice').src = 'dice-' + dice + '.png';

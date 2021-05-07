@@ -1,0 +1,4 @@
+Tópicos:
+    1 - How to use functions to correctly apply the "DRY" principle;
+    2 - How to think about the game logic like programmer.
+

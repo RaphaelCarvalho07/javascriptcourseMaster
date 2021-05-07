@@ -1,0 +1,8 @@
+Tópicos: 
+1 - Bug?
+        -   Se por acaso, a última rolada de dados do jogador ativo for um 6, ou seja, se após ele tirar um 6, ele armazenar o roundScore, no score, aliado à uma possível
+                rolada de um 6 no dado do jogador seguinte, cairá na situação de zerar o Score, pois na condiçao, ele compara se a rolada atual for 6 e a jogada anterior
+                (armazenada na variável lastDice) também for 6, ele zera o placar do jogador ativo, entretanto, o jogador ativo acaba de tirar o primeiro 6, o "lastDice"
+                com 6 foi do jogador anterior. Como resolver?
+                - inserindo na função "nextPlayer", a variável "lastDice" e atribuindo o valor dela a zero;
+                    - a sintaxe da linha => lastDice = 0 <=

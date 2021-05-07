@@ -1,0 +1,16 @@
+Tópicos:
+    1 - What the ternary operator is;
+        - É um operador de IF statement para deciões mais simples;
+            - Quando escrever um IF/ELSE statement é mais custoso pois só tem uma ação ou outra, usamos o "Ternary Operator";
+        - A sintaxe é => activePlayer === 0 ? activePlayer = 1 : activePlayer = 0 <=;  
+            - Cada símbolo representa um declaração. A primeira construção (===) é o "IF", o segundo (?) é o "THEN" e a terceira construção (:) é o "ELSE"
+     
+    2 - How to add, remove and toggle HTML classes.
+        - Podemos interagir com propriedades de classes do HTML de maneira bem simples por meio da classe de JS eventList;
+            - Essa classe do JS tem diversos métodos para interagirmos com as propriedades HTML.
+                - A sintaxe é => document.querySelector('.player-0-panel').classList.remove('active') <=;
+            - Um dos métodos mais usados para ativar ou desativar propriedades de um elemento é o "toggle";
+                - A sintaxe é => document.querySelector('.player-0-panel').classList.toggle('active') <=;
+            = Este método ativa em uma classe do HTML, uma propriedade;
+                - Caso esta propriedade esteja ativa, o "toggle" desativa a mesma.
+                
